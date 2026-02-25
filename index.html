@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre bardottier- Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+
+  <!-- ===== Floating Theme Toggle ===== -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌣</button>
+
+  <!-- ===== Hero / Identity ===== -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="intro">Hello, I’m</span>
+      <h1>ALexandre Bardottier</h1>
+      <p class="tagline">
+        I design visuals that connect ideas to people — through
+        <strong>graphics</strong>, <strong>photography</strong>, <strong>video</strong> and <strong>3D</strong>.
+      </p>
+      <div class="actions">
+        <a href="assets/Your_CV.pdf" download class="btn primary">Download CV</a>
+        <a href="#projects" class="btn outline">Explore My Work</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== About / Story ===== -->
+  <section class="section about">
+    <h2>My Story</h2>
+    <p>
+      I’m an interactive and digital media from the university of Polytechnic mauritius, I was always had a
+		passion for graphic design and content creation and this passion has helped me to develop my creative thinking and how to tackel large
+		project while being efficient. I also developed a passion for photography and cameras which has helped me to undersand more on media creation with the process. <p class="about-highlight">
+      I am intrested in many kind of project which involve creativity which has a meaningful impact on the world.
+    </p>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section class="section skills">
+    <h2>What I Work With</h2>
+    <div class="skill-list">
+	  <span>Adobe Creative Suite</span>
+      <span>Photography</span>
+      <span>Video Editing</span>
+      <span>3D Design</span>
+      
+      <span>Maya</span>
+	  <span> Leadership </span>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section projects">
+    <h2>Selected Work</h2>
+    <div class="project-grid">
+
+      <article class="project-card">
+        
+        <div class="project-info">
+          <h3>branding project</h3>
+          <p> Some of the Branding project that i have done for small businesses</p>
+          <a href="assets/branding.zip" download>Download Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        
+        <div class="project-info">
+          <h3>Photography & Retouching</h3>
+          <p>A series of both professional & creative shoot with the progretional mastery of composition light and mood </p>
+          <a href="assets/photo.zip" download>Download Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+       
+        <div class="project-info">
+          <h3>video & 3D</h3>
+          <p>A series of personal video project as well as professional work.</p>
+          <a href="assets/video&3d.zip" download>Download Project →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Downloads ===== -->
+  <section class="section downloads">
+    <h2>More Work</h2>
+    <p class="center">A deeper look into my capstone project.</p>
+    <div class="download-actions">
+      <a href="assets/capstone.zip" class="btn primary">Academic Projects</a>
+     <!-- <a href="assets/internship_projects.zip" class="btn outline">Internship Projects</a> -->
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2026 Alexandre Bardottier</p>
+    <p class="footer-note"></p>
+  </footer>
+
+  <script>
+  // Theme toggle with persistence
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme) {
+    body.className = savedTheme;
+  }
+
+  function toggleTheme() {
+    if (body.classList.contains('dark')) {
+      body.classList.remove('dark');
+      body.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.classList.remove('light');
+      body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+</script>
+
+</body>
+</html>
